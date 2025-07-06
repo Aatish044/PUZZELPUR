@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find the Mine - PuzzelPur</title>
+  <link rel="stylesheet" href="findMine.css">
+</head>
+<body>
+  <div class="title-bar">
+    <button class="desc-button" onclick="toggleDescription()">Description</button>
+    <div class="title">Find the Mine</div>
+  </div>
+
+  <div class="game-container">
+   
+    <div class="info-panel">
+      <label><strong>Select Level:</strong>
+        <select id="level">
+          <option value="easy">Easy (5 moves)</option>
+          <option value="normal">Normal (4 moves)</option>
+          <option value="hard">Hard (3 moves)</option>
+        </select>
+      </label>
+
+      <div><strong>Moves Left:</strong> <span id="movesLeft">5</span></div>
+      <div><strong>Time:</strong> <span id="time">0</span> s</div>
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <div class="control-panel">
+      <button class="button" id="resumePause">Pause</button>
+      <button class="button" onclick="restartGame()">Restart</button>
+      <button class="button" onclick="goHome()">Go Home</button>
+    </div>
+  </div>
+  <div class="modal" id="endModal">
+    <p id="endMessage"></p>
+    <button class="button" onclick="restartGame()">Try Again</button>
+    <button class="button" onclick="goHome()">Go Home</button>
+  </div>
+  <div class="modal" id="descriptionModal">
+    <p>
+      In this game, a hidden mine is secretly placed on the grid. Your goal is to locate that mine within the limited number of moves provided, depending on the difficulty level.
+      Each cell you click reveals the <strong>Manhattan distance</strong> between that cell and the hidden mine — this helps you narrow down the location. The lower the number, the closer you are. If the number is zero, you've found the mine!
+      Use logical reasoning and deduction to find the exact location before running out of moves.
+    </p>
+    <button class="button" onclick="toggleDescription()">Close</button>
+  </div>
+
+  <script src="findMine.js"></script>
+</body>
+</html>
