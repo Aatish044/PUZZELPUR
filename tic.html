@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tic Tac Toe 2.0</title>
+  <link rel="stylesheet" href="tic.css">
+</head>
+<body>
+  <h1>Tic Tac Toe 2.0</h1>
+
+  <div class="top-bar">
+    <div class="mode-selector">
+      <label>Mode:
+        <select id="mode" onchange="resetGame()">
+          <option value="bot">Play vs Bot</option>
+          <option value="friend">Play with Friend</option>
+        </select>
+      </label>
+    </div>
+    <div class="timer" id="timer">Time: 00:00</div>
+  </div>
+
+  <button class="description-btn" onclick="toggleDescription()">Description</button>
+  <div class="description-modal" id="descriptionModal">
+    <div class="description-content">
+      <h3>Game Rules</h3>
+      <p>Each player can only have 3 active marks at a time.</p>
+      <p>Older marks are removed automatically.</p>
+      <p>Try to win before your oldest move disappears!</p>
+      <button onclick="toggleDescription()">Close</button>
+    </div>
+  </div>
+
+  <div class="board-container">
+    <div class="paused-overlay" id="paused-overlay">PAUSED</div>
+    <div class="board" id="board"></div>
+  </div>
+
+  <div id="status"></div>
+
+  <div class="controls">
+    <button onclick="togglePauseResume(this)" id="pause-btn">Pause</button>
+    <button onclick="resetGame()">Reset</button>
+    <button onclick="goHome()">Home</button>
+  </div>
+
+  <div class="end-modal" id="endModal">
+    <div class="end-content">
+      <h2 id="endText"></h2>
+      <div class="end-buttons">
+        <button onclick="resetGame()">🔁 Restart</button>
+        <button onclick="goHome()">🏠 Home</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="tic.js"></script>
+</body>
+</html>
