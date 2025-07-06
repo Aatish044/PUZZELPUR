@@ -74,15 +74,20 @@ function makeMove() {
       x *= y; success = true; updateLog(`mul ${y} applied.`);
     } else if (op === "div" && y >= 1 && x % y === 0) {
       x = Math.floor(x / y); success = true; updateLog(`div ${y} applied.`);
-    } else updateLog(`${op} ${y} failed.`);
+    } else {
+      updateLog(`${op} ${y} failed.`);
+    }
   }
+
+  movesLeft--;
+  updateMoves();
 
   if (success) {
     logHistory.push(x);
-    movesLeft--;
-    updateMoves();
     if (x === n) endGame(true);
     else if (movesLeft === 0) endGame(false);
+  } else {
+    if (movesLeft === 0) endGame(false);
   }
 
   document.getElementById("value").value = "";
@@ -102,13 +107,8 @@ function endGame(won) {
 
 function toggleDescription() {
   const modal = document.getElementById("description-modal");
-  if (modal.style.display === "flex") {
-    modal.style.display = "none";
-    paused = false;
-  } else {
-    modal.style.display = "flex";
-    paused = true;
-  }
+  paused = modal.style.display !== "flex";
+  modal.style.display = paused ? "flex" : "none";
 }
 
 function resumeGame() {
