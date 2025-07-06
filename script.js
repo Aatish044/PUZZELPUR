@@ -28,7 +28,7 @@ function updateSelectedGame(index) {
     } else if (gameName === 'tictactoe') {
       window.location.href = 'tic.html';
     } else {
-      window.location.href = 'mathgame.html';
+      window.location.href = 'hacknumber.html';
     }
   };
 }
