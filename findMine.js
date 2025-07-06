@@ -96,7 +96,7 @@ function restartGame() {
 }
 
 function goHome() {
-  window.location.href = 'homeed.html';
+  window.location.href = 'home.html';
 }
 
 function toggleDescription() {
