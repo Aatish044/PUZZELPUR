@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mathmech Duel: Interactive Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <button class="description-btn" onclick="toggleDescription()">Description</button>
+    <div class="timer" id="timer">00:00</div>
+  </div>
+
+  <div class="main-container">
+    <div class="side-panel">
+      <div class="level-select">
+        <label><strong>Choose Level</strong></label>
+        <select id="level" onchange="setLevel(this.value)">
+          <option value="normal">Normal (7 moves)</option>
+          <option value="hard">Hard (5 moves)</option>
+        </select>
+      </div>
+      <div class="control-panel">
+        <button onclick="resumeGame()">Resume</button>
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="goHome()">Home</button>
+      </div>
+      <button class="undo-btn" onclick="undoMove()">Undo</button>
+    </div>
+
+    <div class="game-box">
+      <div class="target-display">🎯 Target: <span id="target-number">?</span></div>
+      <div class="moves-info">Moves Left: <span id="moves-left"></span></div>
+      <div class="commands">
+        <select id="operation">
+          <option value="add">Add</option>
+          <option value="mul">Multiply</option>
+          <option value="div">Divide</option>
+          <option value="digit">Digit Sum</option>
+        </select>
+        <input type="number" id="value" placeholder="Value (if required)">
+        <button onclick="makeMove()">Make Move</button>
+      </div>
+      <div class="log" id="log"><div>> Game logs will appear here.</div></div>
+    </div>
+  </div>
+
+  <div class="description-modal" id="description-modal">
+    <div class="description-content">
+      <h2>Game Rules</h2>
+      <p>
+        There is a <strong>hidden number</strong> (initial value) and your goal is to transform it into the <strong>target number</strong> using a sequence of operations within the limited number of moves.
+      </p>
+      <ul style="text-align:left">
+        <li><b>Add y</b>: x = x + y, if 1 ≤ x+y ≤ 10<sup>18</sup></li>
+        <li><b>Multiply y</b>: x = x * y, if in range</li>
+        <li><b>Divide y</b>: x = x / y, if divisible</li>
+        <li><b>Digit Sum</b>: x becomes the sum of its digits</li>
+      </ul>
+      <p>Try to reach the target before running out of moves!</p>
+      <button onclick="toggleDescription()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
