@@ -1,6 +1,6 @@
 # 🧩 PuzzlePur - The Ultimate Web Puzzle Hub
 
-Welcome to **PuzzlePur**, a sleek, interactive, and modular puzzle platform designed for mental agility, fun, and challenge. This web-based project includes a variety of brain games like **Find the Mine**, **Hacking Numbers **, and **Tic Tac Toe 2.0**, each crafted with modern UI/UX and customizable difficulty levels.
+Welcome to **PuzzlePur**, a sleek, interactive, and modular puzzle platform designed for mental agility, fun, and challenge. This web-based project includes a variety of brain games like **Find the Mine**, **Hacking Numbers**, and **Tic Tac Toe 2.0**, each crafted with modern UI/UX and customizable difficulty levels.
 
 ---
 
