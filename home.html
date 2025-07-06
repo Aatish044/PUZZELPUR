@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PuzzelPur - Game Launcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="left-panel">
+    <h1>🎮 Welcome to PuzzelPur</h1>
+  </div>
+
+  <div class="right-panel">
+    <div class="content-wrapper">
+      <h2>Select your game</h2>
+      <div class="games" id="gameList">
+        <!-- Math Game -->
+        <div class="game-item selected" tabindex="0" data-game="mathgame" data-desc="Transform the hidden number into the target number using smart operations like Add, Multiply, Divide, and Digit Sum. Limited moves per level!">
+          <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/..." alt="Math Game" />
+        </div>
+
+        <!-- Tic Tac Toe -->
+        <div class="game-item" tabindex="0" data-game="tictactoe" data-desc="Tic Tac Toe 2.0: Play against a bot or a friend. Each player can only have 3 marks at a time. Smart minimax bot included!">
+          <img src="https://static.vecteezy.com/system/resources/previews/002/423/122/large_2x/tic-tac-toe-icon-illustration-free-vector.jpg" alt="Tic Tac Toe 2.0" />
+        </div>
+
+        <!-- Find the Mine -->
+        <div class="game-item" tabindex="0" data-game="mine" data-desc="Find the hidden mine in this challenging game of deduction and logic ,Everytime you click on a cell the cell will give you information about the mine.">
+          <img src="https://play-lh.googleusercontent.com/QfLR8ihdAADvj2ee2zy1i1Ue58Czb4pIwpF5vi2MrJaB3iKXGcH14xjQY8VpH-TzS38" alt="Find The Mine" />
+        </div>
+      </div>
+
+      <div id="gameDescription">
+        Click on a game to see its description here.
+        <button id="startButton" style="display:none;">Start Game</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  overflow-x: hidden;
+  min-width: 700px;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.left-panel {
+  width: 400px;
+  min-width: 400px;
+  background-color: #add8e6;
+  color: #1e1e2f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.left-panel img {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+.left-panel h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.right-panel {
+  flex: 1;
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  background-color: white;
+  color: #1e1e2f;
+  user-select: none;
+}
+
+.content-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.right-panel h2 {
+  margin: 0 0 20px 86px;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+  padding: 50px 10px 10px 100px;
+  user-select: none;
+}
+
+.game-item {
+  cursor: pointer;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+  outline: none;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.game-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  display: block;
+  user-select: none;
+}
+
+.game-item:hover img,
+.game-item.selected img {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px #1e90ff;
+  border: 4px solid #1e90ff;
+  z-index: 1;
+}
+
+#gameDescription {
+  background: #f0f4ff;
+  color: #1e1e2f;
+  padding: 25px 30px 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.3);
+  font-size: 1.1rem;
+  min-height: 100px;
+  max-height: 160px;
+  overflow-y: auto;
+  text-align: left;
+  position: relative;
+}
+
+#startButton {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  background-color: #1e90ff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+#startButton:hover {
+  background-color: #1565c0;
+}
