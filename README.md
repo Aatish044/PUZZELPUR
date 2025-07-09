@@ -47,13 +47,5 @@ A classic Tic Tac Toe game with a twist: players only get to hold **3 active mar
 
 ---
 
-## 🧠 Why PuzzlePur?
 
-- Built with **pure HTML, CSS, and JavaScript** (no frameworks)
-- Fully modular and mobile-friendly
-- Lightweight and fast-loading
-- Real-time game state updates
-- Clear separation of concerns (HTML structure, CSS styling, JS logic)
-
----
 
